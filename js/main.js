@@ -23,7 +23,6 @@ let orderRange = Array.from(Array(blocks.length).keys());
 
 shuffle(orderRange);
 
-
 blocks.forEach((block,index)=>{
 
     block.style.order = orderRange[index];
@@ -34,7 +33,6 @@ blocks.forEach((block,index)=>{
     })
 
 })
-
 
 // flip block function
 function flipBlock(selectedBlock){
@@ -54,8 +52,6 @@ function flipBlock(selectedBlock){
         checkMatchedBlocks(allFlippedBlocks);
     }
 
-
-
 }
 
 function checkMatchedBlocks(allFlipped){
@@ -74,7 +70,6 @@ function checkMatchedBlocks(allFlipped){
             allFlipped.forEach(blockFlipped => blockFlipped.classList.add("has-match"));
             allFlipped.forEach(blockFlipped => blockFlipped.classList.remove("is-flipped"));
      
-
     }else{
 
         // Add number of tries
@@ -86,7 +81,6 @@ function checkMatchedBlocks(allFlipped){
         
     }
     
-
 }
 
 function stopClicking(){
@@ -98,7 +92,6 @@ function stopClicking(){
         blockContainer.classList.remove("no-clicking");
     },duration);
 }
-
 
 // shuffle function
 
